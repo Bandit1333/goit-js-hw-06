@@ -1,26 +1,14 @@
-// document.getElementById('validation-input').addEventListener('blur', function() {
-//     const inputValue = this.value;
-//     const dataLength = this.dataset.length;
-//  function (valid, invalid) {
-//     this.classList.remove('invalid');
-//     this.classList.add('valid');
-// }
-//     if (inputValue.length === parseInt(dataLength, 10)) {
-//         this.classList.remove('invalid');
-//         this.classList.add('valid');
-//      }
-// });
-document.getElementById('validation-input').addEventListener('blur', function() {
-    const inputValue = this.value;
-    const dataLength = this.dataset.length;
-  function name(params) {
-    this.classList.remove('valid');
-   this.classList.add('invalid');
-  }
-    if (inputValue.length === parseInt(dataLength, 10)) {
-        this.classList.remove('invalid');
-        this.classList.add('valid');
-    }
-//       
-//     }
+const validationInput = document.querySelector('#validation-input');
+const numberVelueLength = Number(validationInput.dataset.length);
+console.log(numberVelueLength)
+validationInput.addEventListener('blur', (event) => {
+  console.log(event.target.value.length)
+  
+    if (event.target.value.length === numberVelueLength) {
+        validationInput.classList.remove('invalid'); 
+       validationInput.classList.add('valid'); 
+    } else {
+       validationInput.classList.remove('valid');
+       validationInput.classList.add('invalid');
+    } 
 });
