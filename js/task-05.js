@@ -1,6 +1,5 @@
+const input = document.querySelector('#name-input');
+const output = document.querySelector('#name-output');
 
-const output = document.querySelector(`#name-output`);
-const input = document.querySelector(`#name-input`);
-
-input.addEventListener("input", (event) => 
-textOutput.textContent = event.target.value||`Anonymous`);
+input.addEventListener('input',(event) => !event.target.value  ? output.textContent =  "Anonymous" :output.textContent = event.target.value
+);
